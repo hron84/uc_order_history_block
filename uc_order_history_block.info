@@ -1,0 +1,5 @@
+name = "Ubercart order history block"
+description = "Gives a block for user's order history"
+core = 6.x
+
+dependencies[] = uc_order

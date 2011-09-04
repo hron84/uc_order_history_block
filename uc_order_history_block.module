@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Displays users order history in a block
+ */
+function uc_order_history_block_block($op, $delta, $edit = array()) {
+  $block = array();
+  switch($op) { 
+    case 'list':
+      $block[0]['info'] = t('Orders');
+      return $block;
+    case 'view':
+      global $user;
+      $block[0]['subject'] = t('Orders');
+      $block[0]['content'] = uc_order_history($user);
+      return $block;
+  }
+}
